@@ -35,4 +35,7 @@ Route::get('/ideas',[IdeaController::class,'index'])->name('idea.index');
 Route::get('/ideas/create',[IdeaController::class,'create'])->name('idea.create');
 Route::post('/ideas/store',[IdeaController::class,'store'])->name('idea.store');
 Route::get('/ideas/edit/{idea}',[IdeaController::class,'edit'])->name('idea.edit');
-Route::put('/ideas/update',[IdeaController::class,'edit'])->name('idea.update');
+Route::put('/ideas/update/{idea}',[IdeaController::class,'update'])->name('idea.update');
+Route::get('/ideas/show/{idea}',[IdeaController::class,'show'])->name('idea.show');
+Route::delete('/ideas/{idea}',[IdeaController::class,'delete'])->name('idea.delete');
+Route::put('/ideas/liked/{idea}',[IdeaController::class,'liked'])->name('idea.liked');
